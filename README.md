@@ -1,4 +1,4 @@
-<img src="https://komarev.com" alt="Profile Views Counter" />
+![Profile Views](https://komarev.com)
 
 ### 📉 Real-Time Analytics & Repository Activity
 

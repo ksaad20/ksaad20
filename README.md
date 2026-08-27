@@ -1,4 +1,4 @@
-
+<img src="https://komarev.com" alt="Profile Views Counter" />
 ---
 
 # Hi there, I'm Kazi Saad Asif 👋

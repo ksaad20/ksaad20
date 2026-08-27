@@ -1,12 +1,12 @@
 ### 📉 Real-Time Analytics & Repository Activity
 
 <p align="left">
-  <img src="https://vercel.app" alt="GitHub Stats" width="400" />
-  <br/><br/>
-  <img src="https://herokuapp.com" alt="GitHub Streak" width="400" />
+  <img src="https://vercel.app" alt="GitHub Trophies" />
 </p>
 
----
+<p align="left">
+  <img src="https://vercel.app" alt="GitHub Summary Card" width="450" />
+</p>
 
 # Hi there, I'm Kazi Saad Asif 👋
 

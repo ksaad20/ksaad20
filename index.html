@@ -154,6 +154,136 @@
             header { flex-direction: column; text-align: center; }
             .toc-grid { grid-template-columns: 1fr 1fr; }
         }
+
+                /* HARDWARE ACCELERATED CAROUSEL CORE SYSTEM ENGINE CSS */
+        .carousel-viewframe {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            background: #ffffff;
+            padding-bottom: 20px;
+        }
+
+        .carousel-slider-track {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            width: 300%; /* Maps 3 independent full-width block slides */
+        }
+
+        .content-section {
+            width: 33.33333%; /* Allocates exactly 100% viewport width per slide */
+            box-sizing: border-box;
+            padding: 40px 30px;
+            flex-shrink: 0;
+        }
+
+        .content-section h2 {
+            font-size: 1.6rem;
+            color: var(--slate-900);
+            margin-top: 0;
+            margin-bottom: 24px;
+            border-bottom: 3px solid var(--slate-900);
+            padding-bottom: 8px;
+        }
+
+        .section-link {
+            font-size: 0.85rem;
+            font-weight: normal;
+            color: var(--sky-500);
+            text-decoration: none;
+            float: right;
+            margin-top: 6px;
+        }
+
+        .academic-institution, .job-position, .award-position {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 24px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        .pdf-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 12px;
+            margin-top: 14px;
+        }
+
+        .pdf-link {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 10px 14px;
+            border-radius: 6px;
+            color: #0284c7 !important;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.85rem;
+            display: inline-block;
+            transition: all 0.2s;
+        }
+
+        .pdf-link:hover {
+            background: #f0f9ff;
+            border-color: #38bdf8;
+        }
+
+        /* NAVIGATION INTERFACE MANUAL CONTROLS BUTTONS */
+        .carousel-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--slate-900);
+            color: #ffffff;
+            border: none;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.2rem;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .carousel-nav-btn:hover {
+            background: var(--sky-500);
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .btn-left-arrow { left: 16px; }
+        .btn-right-arrow { right: 16px; }
+
+        /* DOT INDICATORS ROW BOX */
+        .carousel-indicator-row {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+
+        .indicator-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #cbd5e1;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .indicator-dot.active-dot {
+            background: var(--slate-900);
+            transform: scale(1.2);
+            width: 24px;
+            border-radius: 6px;
+        }
+        
     </style>
 
     <!-- 🌐 COMPREHENSIVE SEO STRUCTURAL DATA GRAPH -->

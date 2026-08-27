@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kazi Saad Asif (Asif Kazi) | Scientific Computing Primitives</title>
+    <title>Kazi Saad Asif (Asif Kazi) | Definitive Comprehensive Digital Index</title>
     
-    <meta name="description" content="Official technical portfolio of Kazi Saad Asif (Asif Kazi). Author of phystensor and circuitbench. Specializing in deterministic scientific computing and secure multi-disciplinary engineering frameworks.">
-    <meta name="keywords" content="Kazi Saad Asif, Asif Kazi, phystensor, circuitbench, scientific computing, OpenSSF, deterministic software architecture">
+    <meta name="description" content="Omni-channel authority hub and exhaustive professional repository for Kazi Saad Asif (Asif Kazi). Scientific computing engineer, physics engine architect, and independent researcher.">
+    <meta name="keywords" content="Kazi Saad Asif, Asif Kazi, ksaad20, phystensor, circuitbench, scientific computing, independent research">
     <meta name="author" content="Kazi Saad Asif">
 
     <style>
@@ -20,30 +20,31 @@
             --accent-blue: #58a6ff;
             --accent-green: #3fb950;
             --accent-gold: #d4af37;
+            --accent-purple: #bc8cff;
         }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg-primary);
             color: var(--text-main);
-            max-width: 850px;
+            max-width: 900px;
             margin: 40px auto;
             padding: 0 24px;
             line-height: 1.6;
         }
 
-        .profile-container {
+        header {
             display: flex;
             align-items: center;
             gap: 25px;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 2px solid var(--border-color);
             padding-bottom: 30px;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
         .profile-pic {
-            width: 130px;
-            height: 130px;
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
             border: 3px solid var(--accent-blue);
             object-fit: cover;
@@ -53,13 +54,13 @@
 
         .profile-text h1 {
             color: var(--text-bright);
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             margin: 0 0 5px 0;
         }
 
         .subtitle {
             color: var(--text-muted);
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             margin: 0 0 12px 0;
             font-weight: 400;
         }
@@ -74,88 +75,56 @@
             display: inline-block;
         }
 
-        h2 {
-            color: var(--accent-blue);
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 6px;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            font-size: 1.4rem;
-        }
-
-        a {
-            color: var(--accent-blue);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .metric-strip {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-bottom: 25px;
-        }
-
-        .metric-card {
+        /* Table of Contents / Quick Navigation */
+        .toc-container {
             background-color: var(--bg-secondary);
             border: 1px solid var(--border-color);
-            padding: 15px 20px;
-            border-radius: 6px;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 40px;
+        }
+        .toc-container h3 { margin-top: 0; color: var(--text-bright); }
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            font-size: 0.9rem;
+        }
+        .toc-grid a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+        .toc-grid a:hover { text-decoration: underline; }
+
+        /* General Section Layout */
+        section {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 30px;
+            scroll-margin-top: 20px;
+        }
+
+        section h2 {
+            color: var(--accent-blue);
+            margin-top: 0;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+            font-size: 1.5rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .metric-value-green {
-            color: var(--accent-green);
-            background-color: rgba(63, 185, 80, 0.1);
-            border: 1px solid rgba(63, 185, 80, 0.2);
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-family: monospace;
-            font-weight: bold;
+        .section-link {
+            font-size: 0.85rem;
+            font-weight: normal;
+            color: var(--text-muted);
         }
 
-        .metric-value-gold {
-            color: var(--accent-gold);
-            background-color: rgba(212, 175, 55, 0.1);
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-family: monospace;
-            font-weight: bold;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background-color: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            padding: 20px;
-            border-radius: 6px;
-            margin-bottom: 20px;
-        }
-
-        .card h3 {
-            margin-top: 0;
-            margin-bottom: 8px;
-            color: var(--text-bright);
-            font-size: 1.15rem;
-        }
-
-        .card p {
-            margin: 0 0 12px 0;
-            font-size: 0.95rem;
-            color: var(--text-main);
-        }
+        ul { padding-left: 20px; margin: 10px 0 0 0; }
+        li { margin-bottom: 8px; }
 
         .mono {
             font-family: sfmono-regular, Consolas, Liberation Mono, Menlo, monospace;
@@ -166,31 +135,10 @@
             color: var(--text-bright);
         }
 
-        .solvency-box {
-            background-color: rgba(212, 175, 55, 0.05);
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            padding: 20px;
-            border-radius: 6px;
-            margin-top: 25px;
-        }
-
-        .btn-funding {
-            display: inline-block;
-            background-color: var(--bg-primary);
-            border: 1px solid var(--accent-gold);
-            color: var(--accent-gold);
-            padding: 8px 16px;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            margin-right: 10px;
-            margin-top: 10px;
-            transition: all 0.2s ease;
-        }
-
-        .btn-funding:hover {
-            background-color: var(--accent-gold);
-            color: var(--bg-primary);
-            text-decoration: none;
+        .placeholder-text {
+            color: var(--text-muted);
+            font-style: italic;
+            font-size: 0.95rem;
         }
 
         footer {
@@ -203,12 +151,12 @@
         }
 
         @media (max-width: 600px) {
-            .profile-container { flex-direction: column; text-align: center; }
-            .metric-strip { grid-template-columns: 1fr; }
+            header { flex-direction: column; text-align: center; }
+            .toc-grid { grid-template-columns: 1fr 1fr; }
         }
     </style>
 
-    <!-- 🌐 COMPREHENSIVE GRAPH INDEX FOR SEARCH ENGINES -->
+    <!-- 🌐 COMPREHENSIVE SEO STRUCTURAL DATA GRAPH -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -222,7 +170,6 @@
         "name": "BRAC University"
       },
       "award": "Edexcel High Achiever's Award",
-      "knowsAbout": ["Scientific Computing", "Deterministic Infrastructure", "Tensor Mathematics"],
       "sameAs": [
         "https://linkedin.com",
         "https://github.com",
@@ -238,49 +185,71 @@
 </head>
 <body>
 
-    
-    <header class="profile-container">
-        <img src="avatar.jpg" alt="Kazi Saad Asif" class="profile-pic" onerror="this.style.display='none';">
+    <!-- Root Header -->
+    <header>
+        <img src="avatar.jpg" alt="Kazi Saad Asif Portrait" class="profile-pic" onerror="this.style.display='none';">
         <div class="profile-text">
             <h1>Kazi Saad Asif</h1>
-            <div class="subtitle">Deterministic Systems &amp; Scientific Software Architecture</div>
+            <div class="subtitle">Independent System Architect &amp; Computation Engineer</div>
             <div class="alias-banner">
-                Index Reconciliation: <strong>Kazi Saad Asif</strong> / <strong>Asif Kazi</strong>
+                Identity Reconciliation: <strong>Kazi Saad Asif</strong> // <strong>Asif Kazi</strong>
             </div>
         </div>
     </header>
 
-    <p style="margin-top: -10px; margin-bottom: 25px;">
-        Engineering high-integrity mathematical components, strictly-typed physical primitives, and secure deployment tooling completely outside traditional institutional constraints. Focused on absolute runtime predictability and bitwise transparency.
-    </p>
-
-    <!-- 10/10 Core Verification Metrics -->
-    <div class="metric-strip">
-        <div class="metric-card">
-            <span>OpenSSF Supply Chain Security:</span>
-            <span class="metric-value-green">105% Compliance</span>
-        </div>
-        <div class="metric-card">
-            <span>Foundational Intelligence Matrix:</span>
-            <span class="metric-value-gold">Edexcel High Achiever</span>
-        </div>
-    </div>
-
-    <!-- Clickable Source Repositories -->
-    <h2>1. Computational Source Engines</h2>
-    <div class="grid">
-        <div class="card">
-            <h3><a href="https://github.com" target="_blank" rel="noopener">GitHub Code Architecture</a></h3>
-            <p>Main host for all source frameworks, development trees, build configurations, and low-level system testing primitives under the profile <span class="mono">ksaad20</span>.</p>
-        </div>
-        <div class="card">
-            <h3><a href="https://pypi.org" target="_blank" rel="noopener">PyPI Deployed Packages</a></h3>
-            <p>Production releases of <span class="mono">phystensor</span>, a strictly-typed physical tensor configuration ecosystem engineered for deterministic runtime execution and cross-hardware predictability.</p>
-        </div>
-        <div class="card">
-            <h3><a href="https://github.com" target="_blank" rel="noopener">Conda-Forge Integration</a></h3>
-            <p>Official infrastructure deployment channel and build tracking for mathematical packages, hosting environments such as <span class="mono">circuitbench</span>.</p>
+    <!-- Index Quick Navigation Matrix -->
+    <div class="toc-container">
+        <h3>Index Matrix Quick Navigation</h3>
+        <div class="toc-grid">
+            <a href="#about">1. About</a>
+            <a href="#academic">2. Academic Credentials</a>
+            <a href="#professional">3. Professional Experience</a>
+            <a href="#opensource">4. Open Source Contributions</a>
+            <a href="#awards">5. Awards</a>
+            <a href="#extracurricular">6. Extra Curricular Activities</a>
+            <a href="#media">7. Media Outlets</a>
+            <a href="#communication">8. Communication Protocols</a>
+            <a href="#causes">9. Causes</a>
+            <a href="#publications">10. Publications</a>
+            <a href="#politics">11. Politics</a>
+            <a href="#philosophy">12. Philosophy</a>
+            <a href="#biological">13. Biological Information</a>
+            <a href="#geographic">14. Geographic Footprint</a>
+            <a href="#curiosities">15. Curiosities</a>
+            <a href="#family">16. Family Tree</a>
+            <a href="#hobbies">17. Hobbies</a>
+            <a href="#financial">18. Financial Information</a>
         </div>
     </div>
 
-    <!-- Clickable Academic Datasets & Archives -->
+    <!-- 1. ABOUT -->
+    <section id="about">
+        <h2>About <a href="#" class="section-link">[Edit Link]</a></h2>
+        <p>Independent multi-disciplinary systems engineer and researcher specializing in high-integrity software components, deterministic physics computing libraries, and physical primitive structures. Operating outside standard institutional and bureaucratic structures to prioritize absolute code transparency and algorithmic truth.</p>
+    </section>
+
+    <!-- 2. ACADEMIC CREDENTIALS -->
+    <section id="academic">
+        <h2>Academic Credentials <a href="https://linkedin.com" target="_blank" class="section-link">[Verified Transcripts]</a></h2>
+        <p>Exhaustive records maintained transparently via public channels:</p>
+        <ul>
+            <li><strong>B.Sc. in Electrical and Electronics Engineering</strong> &mdash; BRAC University. Core tracking focused on math modeling, computing primitives, and circuit dynamics.</li>
+            <li><strong>Raw Grade Data &amp; Verification:</strong> Full unedited structural transcripts are uploaded openly to <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn Profile History</a> to enforce maximum clarity.</li>
+        </ul>
+    </section>
+
+    <!-- 3. PROFESSIONAL EXPERIENCE -->
+    <section id="professional">
+        <h2>Professional Experience <a href="#" class="section-link">[Add Project Contract Link]</a></h2>
+        <p>Maintained via independent research architectures, customized external engineering contracts, and algorithmic deployments:</p>
+        <ul>
+            <li><strong>Independent R&amp;D Engineer / Computing Consultant</strong> &mdash; Developing and auditing deterministic runtime code environments and scientific software components.</li>
+            <li><span class="placeholder-text">User configuration path: Add direct corporate consulting records or private entity engineering project history links here.</span></li>
+        </ul>
+    </section>
+
+    <!-- 4. OPEN SOURCE CONTRIBUTIONS -->
+    <section id="opensource">
+        <h2>Open Source Contributions <a href="https://github.com" target="_blank" class="section-link">[Source Tree]</a></h2>
+        <p>High-integrity software packages engineered under strict compliance metrics:</p>
+        <ul>

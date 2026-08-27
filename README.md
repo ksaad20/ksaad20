@@ -1,6 +1,9 @@
-![Public Repositories](https://shields.io)
+### 📉 Profile Metrics & Core Statistics
 
-![Total Stars](https://shields.io)
+| Metric | Current Impact |
+| :--- | :--- |
+| 🗂️ **Public Repositories** | <!-- REPOS_COUNT -->**50** Active Projects |
+| 👥 **Network Ecosystem** | <!-- NETWORK_COUNT -->**4** Followers / **4** Following |
 
 # Hi there, I'm Kazi Saad Asif 👋
 

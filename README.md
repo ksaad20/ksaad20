@@ -1,9 +1,10 @@
-![GitHub Stats](https://vercel.app)
-
-
 ### 📉 Real-Time Analytics & Repository Activity
 
-![GitHub Streak](https://vercel.app)
+<p align="left">
+  <img src="https://vercel.app" alt="GitHub Stats" width="400" />
+  <br/><br/>
+  <img src="https://herokuapp.com" alt="GitHub Streak" width="400" />
+</p>
 
 ---
 

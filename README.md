@@ -1,10 +1,6 @@
-### 📉 Real-Time Analytics & Repository Activity
-
-![Public Repos](https://shields.io)
+![Public Repositories](https://shields.io)
 
 ![Total Stars](https://shields.io)
-
-![Followers](https://shields.io)
 
 # Hi there, I'm Kazi Saad Asif 👋
 

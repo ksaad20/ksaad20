@@ -3,25 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kazi Saad Asif (Asif Kazi) | Scientific Computing & Independent Research</title>
-    <meta name="description" content="Official portfolio of Kazi Saad Asif (also known professionally as Asif Kazi). Scientific computing engineer, independent researcher, and creator of phystensor.">
+    <title>Kazi Saad Asif (Asif Kazi) | Scientific Computing Primitives</title>
     
-    <!-- Visual Styling (Minimalist, Dark Mode Theme) -->
+    <meta name="description" content="Official technical portfolio of Kazi Saad Asif (Asif Kazi). Author of phystensor and circuitbench. Specializing in deterministic scientific computing and secure multi-disciplinary engineering frameworks.">
+    <meta name="keywords" content="Kazi Saad Asif, Asif Kazi, phystensor, circuitbench, scientific computing, OpenSSF, deterministic software architecture">
+    <meta name="author" content="Kazi Saad Asif">
+
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #0d1117; color: #c9d1d9; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.6; }
-        h1 { color: #f0f6fc; margin-bottom: 5px; }
-        .subtitle { color: #8b949e; font-size: 1.1rem; margin-top: 0; margin-bottom: 30px; }
-        h2 { color: #58a6ff; border-bottom: 1px solid #21262d; padding-bottom: 5px; margin-top: 40px; }
-        a { color: #58a6ff; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .badge-container { margin: 20px 0; background: #161b22; padding: 15px; border-radius: 6px; border: 1px solid #30363d; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        .card { background: #161b22; padding: 15px; border-radius: 6px; border: 1px solid #30363d; }
-        .card h3 { margin-top: 0; color: #f0f6fc; }
-        .tag { font-family: monospace; background: #21262d; padding: 2px 6px; border-radius: 3px; font-size: 0.85rem; color: #8b949e; }
+        :root {
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --border-color: #30363d;
+            --text-main: #c9d1d9;
+            --text-bright: #f0f6fc;
+            --text-muted: #8b949e;
+            --accent-blue: #58a6ff;
+            --accent-green: #3fb950;
+            --accent-gold: #d4af37;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 0 24px;
+            line-height: 1.6;
+        }
+
+        .profile-container {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+        }
+
+        .profile-pic {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-blue);
+            object-fit: cover;
+            background-color: var(--bg-secondary);
+            flex-shrink: 0;
+        }
+
+        .profile-text h1 {
+            color: var(--text-bright);
+            font-size: 2.2rem;
+            margin: 0 0 5px 0;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            margin: 0 0 12px 0;
+            font-weight: 400;
+        }
+
+        .alias-banner {
+            background-color: rgba(88, 166, 255, 0.08);
+            border: 1px solid rgba(88, 166, 255, 0.2);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            color: var(--accent-blue);
+            display: inline-block;
+        }
+
+        h2 {
+            color: var(--accent-blue);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 6px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+        }
+
+        a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .metric-strip {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .metric-card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            padding: 15px 20px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .metric-value-green {
+            color: var(--accent-green);
+            background-color: rgba(63, 185, 80, 0.1);
+            border: 1px solid rgba(63, 185, 80, 0.2);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-weight: bold;
+        }
+
+        .metric-value-gold {
+            color: var(--accent-gold);
+            background-color: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-weight: bold;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            color: var(--text-bright);
+            font-size: 1.15rem;
+        }
+
+        .card p {
+            margin: 0 0 12px 0;
+            font-size: 0.95rem;
+            color: var(--text-main);
+        }
+
+        .mono {
+            font-family: sfmono-regular, Consolas, Liberation Mono, Menlo, monospace;
+            background-color: rgba(110, 118, 129, 0.2);
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-size: 0.85rem;
+            color: var(--text-bright);
+        }
+
+        .solvency-box {
+            background-color: rgba(212, 175, 55, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 25px;
+        }
+
+        .btn-funding {
+            display: inline-block;
+            background-color: var(--bg-primary);
+            border: 1px solid var(--accent-gold);
+            color: var(--accent-gold);
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            margin-right: 10px;
+            margin-top: 10px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-funding:hover {
+            background-color: var(--accent-gold);
+            color: var(--bg-primary);
+            text-decoration: none;
+        }
+
+        footer {
+            margin-top: 60px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 600px) {
+            .profile-container { flex-direction: column; text-align: center; }
+            .metric-strip { grid-template-columns: 1fr; }
+        }
     </style>
 
-    <!-- 🚀 HIDDEN SEO SCHEMA: Tells Google's algorithm that all these channels are ONE person -->
+    <!-- 🌐 COMPREHENSIVE GRAPH INDEX FOR SEARCH ENGINES -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -29,11 +216,13 @@
       "name": "Kazi Saad Asif",
       "additionalName": "Asif Kazi",
       "url": "https://github.io",
+      "image": "https://github.ioavatar.jpg",
       "alumniOf": {
         "@type": "EducationalOrganization",
         "name": "BRAC University"
       },
       "award": "Edexcel High Achiever's Award",
+      "knowsAbout": ["Scientific Computing", "Deterministic Infrastructure", "Tensor Mathematics"],
       "sameAs": [
         "https://linkedin.com",
         "https://github.com",
@@ -49,57 +238,49 @@
 </head>
 <body>
 
-    <header>
-        <h1>Kazi Saad Asif</h1>
-        <p class="subtitle">Deterministic Systems | Open-Source Scientific Computing Engineering</p>
-        <p>Independent researcher and engineer specializing in strictly-typed physical tensors, aerospace computing primitives, and robust open-source technical architecture. Professionally recognized as <strong>Asif Kazi</strong> across global search entities.</p>
+    
+    <header class="profile-container">
+        <img src="avatar.jpg" alt="Kazi Saad Asif" class="profile-pic" onerror="this.style.display='none';">
+        <div class="profile-text">
+            <h1>Kazi Saad Asif</h1>
+            <div class="subtitle">Deterministic Systems &amp; Scientific Software Architecture</div>
+            <div class="alias-banner">
+                Index Reconciliation: <strong>Kazi Saad Asif</strong> / <strong>Asif Kazi</strong>
+            </div>
+        </div>
     </header>
 
-    <!-- Infrastructure Integrity Metrics -->
-    <div class="badge-container">
-        <strong>OpenSSF Best Practices Infrastructure Compliance:</strong> 
-        <span class="tag">Passing 105%</span>
-        <p style="font-size: 0.9rem; margin: 5px 0 0 0; color: #8b949e;">Architect of <code>phystensor</code>, a strictly-typed physical tensor computation library deployed with rigid security and enterprise maintenance baselines.</p>
+    <p style="margin-top: -10px; margin-bottom: 25px;">
+        Engineering high-integrity mathematical components, strictly-typed physical primitives, and secure deployment tooling completely outside traditional institutional constraints. Focused on absolute runtime predictability and bitwise transparency.
+    </p>
+
+    <!-- 10/10 Core Verification Metrics -->
+    <div class="metric-strip">
+        <div class="metric-card">
+            <span>OpenSSF Supply Chain Security:</span>
+            <span class="metric-value-green">105% Compliance</span>
+        </div>
+        <div class="metric-card">
+            <span>Foundational Intelligence Matrix:</span>
+            <span class="metric-value-gold">Edexcel High Achiever</span>
+        </div>
     </div>
 
-    <!-- Verified Credentials & Receipts -->
-    <h2>Verified Background & Transcripts</h2>
-    <div class="card">
-        <h3>Academic Pedigree</h3>
-        <ul>
-            <li><strong>Edexcel High Achiever's Award</strong> — Globally standardized baseline tracking.</li>
-            <li><strong>B.Sc. Electrical & Electronics Engineering</strong> — BRAC University.</li>
-            <li><strong>Raw Receipts:</strong> <a href="https://linkedin.com" target="_blank">Access Official Academic Transcripts Posted Live on LinkedIn</a>.</li>
-        </ul>
-    </div>
-
-    <!-- The Authority Loop of Channels -->
-    <h2>Connected Repositories & Channels</h2>
+    <!-- Clickable Source Repositories -->
+    <h2>1. Computational Source Engines</h2>
     <div class="grid">
         <div class="card">
-            <h3>Development & Source</h3>
-            <ul>
-                <li><a href="https://github.com" target="_blank">GitHub Portfolio</a></li>
-                <li><a href="https://pypi.org" target="_blank">PyPI Infrastructure Packages</a></li>
-            </ul>
+            <h3><a href="https://github.com" target="_blank" rel="noopener">GitHub Code Architecture</a></h3>
+            <p>Main host for all source frameworks, development trees, build configurations, and low-level system testing primitives under the profile <span class="mono">ksaad20</span>.</p>
         </div>
         <div class="card">
-            <h3>Academic Archives</h3>
-            <ul>
-                <li><a href="https://google.com" target="_blank">Google Scholar Profile</a></li>
-                <li><a href="https://zenodo.org" target="_blank">Zenodo Open Archives</a></li>
-                <li><a href="https://datadryad.org" target="_blank">Dryad Curation Datasets</a></li>
-                <li><a href="https://researchgate.net" target="_blank">ResearchGate Network</a></li>
-            </ul>
+            <h3><a href="https://pypi.org" target="_blank" rel="noopener">PyPI Deployed Packages</a></h3>
+            <p>Production releases of <span class="mono">phystensor</span>, a strictly-typed physical tensor configuration ecosystem engineered for deterministic runtime execution and cross-hardware predictability.</p>
+        </div>
+        <div class="card">
+            <h3><a href="https://github.com" target="_blank" rel="noopener">Conda-Forge Integration</a></h3>
+            <p>Official infrastructure deployment channel and build tracking for mathematical packages, hosting environments such as <span class="mono">circuitbench</span>.</p>
         </div>
     </div>
 
-    <h2>Engineering Breakdowns</h2>
-    <div class="card">
-        <h3>Unfiltered Media</h3>
-        <p>Raw physics-based engine, global commodity protocol breakdowns, and architectural philosophy logs are cataloged openly on the <a href="https://youtube.com" target="_blank">Official YouTube Channel</a>.</p>
-    </div>
-
-</body>
-</html>
-
+    <!-- Clickable Academic Datasets & Archives -->

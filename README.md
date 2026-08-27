@@ -1,10 +1,9 @@
-![Profile Views](https://komarev.com)
+![GitHub Stats](https://vercel.app)
+
 
 ### 📉 Real-Time Analytics & Repository Activity
 
-<p align="left">
-  <img src="https://vercel.app" alt="Kazi Saad Asif's GitHub Stats" width="400" />
-</p>
+![GitHub Streak](https://vercel.app)
 
 ---
 

@@ -1,0 +1,36 @@
+name: Update Profile Stats Natively
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs automatically every single day at midnight
+  workflow_dispatch: # Allows you to run it manually with one click whenever you want
+
+jobs:
+  refresh-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Profile Repo
+        uses: actions/checkout@v3
+
+      - name: Fetch Live Stats via GitHub API
+        run: |
+          # Fetch fresh data from the public API
+          USER_JSON=$(curl -s https://github.com)
+          
+          # Extract live counts
+          REPOS=$(echo "$USER_JSON" | jq '.public_repos')
+          FOLLOWERS=$(echo "$USER_JSON" | jq '.followers')
+          FOLLOWING=$(echo "$USER_JSON" | jq '.following')
+          
+          # Inject the new values directly into the Markdown text line
+          sed -i "s|<!-- REPOS_COUNT -->.*|<!-- REPOS_COUNT -->**$REPOS** Active Projects |g" README.md
+          sed -i "s|<!-- NETWORK_COUNT -->.*|<!-- NETWORK_COUNT -->**$FOLLOWERS** Followers / **$FOLLOWING** Following |g" README.md
+
+      - name: Commit and Push Updated Stats
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@://github.com"
+          git add README.md
+          git commit -m "chore: automated profile metrics update" || exit 0
+          git push
+          

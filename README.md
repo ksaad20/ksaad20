@@ -2,8 +2,8 @@
 
 | Metric | Current Impact |
 | :--- | :--- |
-| 🗂️ **Public Repositories** | <!-- REPOS_COUNT -->**50** Active Projects |
-| 👥 **Network Ecosystem** | <!-- NETWORK_COUNT -->**4** Followers / **4** Following |
+| 🗂️ **Public Repositories** | <!-- REPOS_COUNT -->**50** Active Projects 
+| 👥 **Network Ecosystem** | <!-- NETWORK_COUNT -->**4** Followers / **4** Following 
 
 # Hi there, I'm Kazi Saad Asif 👋
 

@@ -15,21 +15,22 @@ jobs:
       - name: Checkout Profile Repo
         uses: actions/checkout@v4
 
-      - name: Fetch Live Stats via Authenticated GitHub API
+      - name: Fetch Live Stats via Native GitHub CLI
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Fetch fresh data using the repository's built-in authentication token
-          USER_JSON=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" https://github.com)
+          # Fetch fields natively using GitHub's built-in CLI tool
+          REPOS=$(gh api users/ksaad20 --jq '.public_repos')
+          FOLLOWERS=$(gh api users/ksaad20 --jq '.followers')
+          FOLLOWING=$(gh api users/ksaad20 --jq '.following')
           
-          # Extract live counts safely
-          REPOS=$(echo "$USER_JSON" | jq '.public_repos')
-          FOLLOWERS=$(echo "$USER_JSON" | jq '.followers')
-          FOLLOWING=$(echo "$USER_JSON" | jq '.following')
-          
-          # Verify that we received valid numbers before editing the file
-          if [ "$REPOS" = "null" ] || [ -z "$REPOS" ]; then
-            echo "Error: Failed to fetch valid data from GitHub API. Response was: $USER_JSON"
+          # Verify that we received valid numbers before modifying the markdown file
+          if [ -z "$REPOS" ] || [ "$REPOS" = "null" ]; then
+            echo "Error: Native GitHub CLI could not retrieve data."
             exit 1
           fi
+          
+          echo "Successfully retrieved metrics: Repos=$REPOS, Followers=$FOLLOWERS, Following=$FOLLOWING"
           
           # Inject the new values directly into the Markdown text line
           sed -i "s|<!-- REPOS_COUNT -->.*|<!-- REPOS_COUNT -->**$REPOS** Active Projects |g" README.md

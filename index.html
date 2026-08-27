@@ -295,6 +295,287 @@
         </div>
     </section>
 
+    <!-- START ENHANCED DIGITAL FOOTPRINT & GEOGRAPHIC GRAPH -->
+<div class="df-wrapper">
+    <div class="df-header">
+        <h1>Kazi Saad Asif — Integrated Footprint Map</h1>
+        <p>A unified data schema mapping the biographical anchor points, educational credentials, and travel vectors of <strong>Kazi Saad Asif</strong> (Asif Kazi).</p>
+    </div>
+
+    <!-- Toggle Selector to prove both names index to the same root -->
+    <div class="df-name-bar">
+        <span>Display Name Vector:</span>
+        Kazi Saad Asif</button>
+        Asif Kazi</button>
+    </div>
+
+    <div class="df-container">
+        <!-- Interactive Canvas Grid -->
+        <div class="df-canvas-area">
+            <div id="df-selected-indicator">Selected Node: <span id="df-target-name">Kazi Saad Asif</span></div>
+            <svg id="df-svg"></svg>
+        </div>
+
+        <!-- Custom Context Sidebar Panel -->
+        <div class="df-sidebar">
+            <div class="df-details-card" id="details-card">
+                <h3 id="node-display-name">Kazi Saad Asif</h3>
+                <div class="df-meta-badge" id="node-relation-badge">Central Root</div>
+                
+                <div class="df-info-row" id="desc-row">
+                    <span class="df-label-text">Context / Verification:</span>
+                    <span class="df-val-text" id="node-desc">The primary entity aggregating fragmented digital footprints, geographical anchor points, and ancestral heritage records into a singular verified web graph node.</span>
+                </div>
+
+                <div class="df-info-row" id="link-row" style="margin-top: 16px;">
+                    <a id="node-link" href="#" target="_blank" class="df-action-link" style="display:none;">View Map Location &rarr;</a>
+                </div>
+            </div>
+            
+            <div class="df-instruction-box">
+                <h4>Interactive Interface</h4>
+                <p>Click and drag nodes to explore connection hierarchies. Click any node to instantly view verified geographical links, addresses, and external mappings in this context sidebar.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- D3.js Data Visualization Library Connection -->
+<script src="https://cloudflare.com"></script>
+
+<style>
+    :root {
+        --slate-900: #0f172a;
+        --slate-800: #1e293b;
+        --slate-700: #334155;
+        --slate-400: #94a3b8;
+        --sky-500: #0ea5e9;
+        --sky-400: #38bdf8;
+        --emerald-600: #059669;
+        --emerald-500: #10b981;
+        --amber-500: #f59e0b;
+        --indigo-500: #6366f1;
+        --rose-500: #f43f5e;
+    }
+
+    .df-wrapper {
+        max-width: 1200px;
+        margin: 30px auto;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 14px;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+    }
+    .df-header {
+        background: var(--slate-900);
+        color: #ffffff;
+        padding: 30px 24px;
+        text-align: center;
+        border-bottom: 1px solid var(--slate-800);
+    }
+    .df-header h1 {
+        margin: 0 0 8px 0;
+        font-size: 1.75rem;
+        font-weight: 800;
+        letter-spacing: -0.03em;
+    }
+    .df-header p {
+        margin: 0;
+        color: var(--slate-400);
+        font-size: 0.95rem;
+    }
+    .df-name-bar {
+        background: #f1f5f9;
+        padding: 12px 24px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        border-bottom: 1px solid #e2e8f0;
+    }
+    .df-name-bar span {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--slate-700);
+    }
+    .df-toggle-btn {
+        background: #ffffff;
+        border: 1px solid #cbd5e1;
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--slate-800);
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+    .df-toggle-btn.active {
+        background: var(--sky-500);
+        color: #ffffff;
+        border-color: var(--sky-500);
+        box-shadow: 0 2px 4px rgba(14, 165, 233, 0.2);
+    }
+    .df-container {
+        display: grid;
+        grid-template-columns: 1fr 350px;
+        height: 700px;
+        background: #ffffff;
+    }
+    .df-canvas-area {
+        position: relative;
+        background: #fafafa;
+        overflow: hidden;
+    }
+    #df-selected-indicator {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        background: rgba(15, 23, 42, 0.95);
+        color: #ffffff;
+        padding: 8px 16px;
+        border-radius: 30px;
+        font-size: 0.8rem;
+        pointer-events: none;
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        z-index: 10;
+    }
+    #df-selected-indicator span {
+        color: var(--sky-400);
+        font-weight: 700;
+    }
+    #df-svg {
+        width: 100%;
+        height: 100%;
+    }
+    .df-sidebar {
+        padding: 24px;
+        border-left: 1px solid #e2e8f0;
+        background: #f8fafc;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow-y: auto;
+    }
+    .df-details-card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    .df-details-card h3 {
+        margin: 0 0 6px 0;
+        font-size: 1.25rem;
+        color: var(--slate-900);
+    }
+    .df-meta-badge {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 4px 8px;
+        border-radius: 4px;
+        margin-bottom: 16px;
+    }
+    .df-info-row {
+        margin-bottom: 12px;
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    .df-label-text {
+        display: block;
+        font-weight: 600;
+        color: var(--slate-400);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        margin-bottom: 2px;
+    }
+    .df-val-text {
+        color: var(--slate-800);
+    }
+    .df-action-link {
+        display: inline-block;
+        background: var(--slate-900);
+        color: #ffffff;
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 6px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        transition: background 0.2s;
+    }
+    .df-action-link:hover {
+        background: var(--sky-500);
+    }
+    .df-instruction-box {
+        background: #f0f9ff;
+        border-left: 4px solid var(--sky-500);
+        padding: 14px;
+        border-radius: 4px;
+        margin-top: 20px;
+    }
+    .df-instruction-box h4 {
+        margin: 0 0 4px 0;
+        font-size: 0.85rem;
+        color: #0369a1;
+    }
+    .df-instruction-box p {
+        margin: 0;
+        font-size: 0.8rem;
+        color: #0c4a6e;
+        line-height: 1.4;
+    }
+    
+    /* Dynamic Network Nodes SVG Classes */
+    .node circle {
+        cursor: pointer;
+        stroke-width: 2px;
+        transition: transform 0.2s, stroke-width 0.2s;
+    }
+    .node.selected circle {
+        stroke: var(--slate-900) !important;
+        stroke-width: 3.5px;
+    }
+    .link {
+        stroke: #e2e8f0;
+        stroke-opacity: 0.8;
+        stroke-width: 1.5px;
+    }
+    .node-text {
+        font-size: 10px;
+        font-weight: 600;
+        fill: var(--slate-800);
+        pointer-events: none;
+    }
+</style>
+
+<script>
+(function() {
+    // ----------------------------------------------------
+    // STRUCTURAL IDENTITY NODES & PRECISE MAP LINK SCHEMAS
+    // ----------------------------------------------------
+    const dataset = {
+        nodes: [
+            // Core Root Identity
+            { id: 0, name: "Kazi Saad Asif", type: "root", desc: "Central entity anchor consolidating cross-platform travel footprints and geo-biographical coordinates.", url: null, color: "#0ea5e9", radius: 24 },
+
+            // Biographical Anchor Points
+            { id: 1, name: "Holy Family Hospital", type: "bio", desc: "Official birth location of Kazi Saad Asif: Holy Family Red Crescent Medical College Hospital, Eskaton, Dhaka.", url: "https://google.com", color: "#f43f5e", radius: 15 },
+            { id: 2, name: "28, South Khilgaon", type: "bio", desc: "Primary and permanent residency anchor point located in South Khilgaon, Dhaka 1219, Bangladesh.", url: "https://google.com", color: "#f43f5e", radius: 15 },
+            { id: 3, name: "Jagotpur, Feni", type: "bio", desc: "Ancestral home lineage point: Village Jagotpur, Natun Munshirhaat, Feni, Chittagong Division, Bangladesh.", url: "https://google.com", color: "#f43f5e", radius: 15 },
+
+            // Educational Institutions
+            { id: 4, name: "Willes Little Flower", type: "education", desc: "Willes Little Flower School and College, Kakrail, Dhaka — primary and secondary educational foundation.", url: "https://google.com", color: "#6366f1", radius: 15 },
+            { id: 5, name: "BRAC University", type: "education", desc: "BRAC University, Dhaka, Bangladesh — higher learning tertiary academic degree engine.", url: "https://google.com", color: "#6366f1", radius: 15 },
+
+            // Travel Footprints - Countries
+            { id: 6, name: "Saudi Arabia", type: "country", desc: "Kingdom of Saudi Arabia (KSA) — cross-border international country entry footprint.", url: "https://google.com", color: "#059669", radius: 16 },
+
+            // Travel Footprints - Cities & Regional Districts
+    <\div>
+    <\section>
+
     <!-- START PERSONAL IDENTITY & HERITAGE ANCHOR -->
 <div class="df-wrapper">
     <div class="df-header">

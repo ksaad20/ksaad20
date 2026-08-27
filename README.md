@@ -1,4 +1,11 @@
 <img src="https://komarev.com" alt="Profile Views Counter" />
+
+### 📉 Real-Time Analytics & Repository Activity
+
+<p align="left">
+  <img src="https://vercel.app" alt="Kazi Saad Asif's GitHub Stats" width="400" />
+</p>
+
 ---
 
 # Hi there, I'm Kazi Saad Asif 👋

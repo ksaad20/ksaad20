@@ -5,22 +5,31 @@ on:
     - cron: '0 0 * * *' # Runs automatically every single day at midnight
   workflow_dispatch: # Allows you to run it manually with one click whenever you want
 
+permissions:
+  contents: write # Grants the workflow permission to write updates back to your README
+
 jobs:
   refresh-stats:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Profile Repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Fetch Live Stats via GitHub API
+      - name: Fetch Live Stats via Authenticated GitHub API
         run: |
-          # Fetch fresh data from the public API
-          USER_JSON=$(curl -s https://github.com)
+          # Fetch fresh data using the repository's built-in authentication token
+          USER_JSON=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" https://github.com)
           
-          # Extract live counts
+          # Extract live counts safely
           REPOS=$(echo "$USER_JSON" | jq '.public_repos')
           FOLLOWERS=$(echo "$USER_JSON" | jq '.followers')
           FOLLOWING=$(echo "$USER_JSON" | jq '.following')
+          
+          # Verify that we received valid numbers before editing the file
+          if [ "$REPOS" = "null" ] || [ -z "$REPOS" ]; then
+            echo "Error: Failed to fetch valid data from GitHub API. Response was: $USER_JSON"
+            exit 1
+          fi
           
           # Inject the new values directly into the Markdown text line
           sed -i "s|<!-- REPOS_COUNT -->.*|<!-- REPOS_COUNT -->**$REPOS** Active Projects |g" README.md
@@ -33,4 +42,3 @@ jobs:
           git add README.md
           git commit -m "chore: automated profile metrics update" || exit 0
           git push
-          

@@ -137,15 +137,41 @@ I'm interested in collaborating on research involving:
 * **Pearson Edexcel IGCSE High Achievers' Award** recipient 
 
 ---
+### 🌐 Digital Directory & Verified Verifications
 
-## 🌐 Connect With Me
+To establish cross-platform validation and index consistency, all official profiles, codebases, and peer-reviewed outputs are cataloged below:
 
-* GitHub: [https://github.com/ksaad20](https://github.com/ksaad20)
-* ORCID: [https://orcid.org/0000-0003-0560-9117](https://orcid.org/0000-0003-0560-9117)
-* Google Scholar: [https://scholar.google.com/citations?user=hmE-X8UAAAAJ](https://scholar.google.com/citations?user=hmE-X8UAAAAJ)
-* Zenodo: [https://zenodo.org/communities](https://zenodo.org/communities)
-* LinkedIn: [https://www.linkedin.com/in/asif-kazi-76a23527b](https://www.linkedin.com/in/asif-kazi-76a23527b)
-* Instagram (Science & Art): [https://www.instagram.com/anecdotal_doodles](https://www.instagram.com/anecdotal_doodles)
+#### 🔬 Research & Academic Repositories
+* 🎓 **Google Scholar:** [Kazi Saad Asif Profile](https://google.com) – Citation matrix and academic tracking.
+* 📝 **ResearchGate:** [Publication Record](https://researchgate.net) – Peer-reviewed thesis and methodology data.
+* 📦 **Dryad Repository:** [Agricultural Open Access Dataset](https://datadryad.org) – Time-series weather and crop pricing logs.
+* 🔗 **Zenodo Registry:** [OrbitMesh Global Archives](https://zenodo.org) – Open science software uploads.
+* 🆔 **ORCID Registry:** [Verified ID 0000-0003-0560-9117](https://orcid.org) – Persistent researcher identification anchor.
+
+#### ⚙️ Software & Ecosystem Deployments
+* 🐍 **PyPI (Python Package Index):** [circuitbench Packaging Engine](https://pypi.org) – Core software library publishing link.
+* 🛡️ **OpenSSF Best Practices:** [BadgeApp Framework Permissions](https://bestpractices.dev) – Open-source security and governance compliance.
+
+#### 📺 Educational & Community Extensions
+* 📹 **YouTube Channel:** [@kazisaadasif Lectures](https://youtube.com) – Open-source video tutorials covering circuit mechanics, Python architectures, and Arduino Uno programming.
+* 🏛️ **IEEE BRAC University:** [Executive Committee Roster (2019)](https://ieeebracu.com) – Historical record serving as the Student Branch Publications Editor.
+
+---
+
+### 📊 Featured Core Project Focus
+
+```python
+class ResearchFocus:
+    def __init__(self):
+        self.degree = "B.Sc. in Electrical and Electronic Engineering"
+        self.alma_mater = "BRAC University (BRACU)"
+        self.domains = ["Machine Learning", "AgriTech Models", "Signal Processing"]
+        self.targets = ["Aman rice", "Aus rice", "Boro rice"]
+
+    def current_status(self):
+        return "Consolidating open-source libraries and predictive data frameworks."
+```
+
 
 ---
 

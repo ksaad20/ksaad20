@@ -1,12 +1,10 @@
 ### 📉 Real-Time Analytics & Repository Activity
 
-<p align="left">
-  <img src="https://vercel.app" alt="GitHub Trophies" />
-</p>
+![Public Repos](https://shields.io)
 
-<p align="left">
-  <img src="https://vercel.app" alt="GitHub Summary Card" width="450" />
-</p>
+![Total Stars](https://shields.io)
+
+![Followers](https://shields.io)
 
 # Hi there, I'm Kazi Saad Asif 👋
 

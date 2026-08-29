@@ -146,7 +146,7 @@ I'm interested in collaborating on research involving:
 To establish cross-platform validation and index consistency, all official profiles, codebases, and peer-reviewed outputs are cataloged below:
 
 #### 🔬 Research & Academic Repositories
-* 🎓 **Google Scholar:** [Kazi Saad Asif Profile](https://google.com) – Citation matrix and academic tracking.
+* 🎓 **Google Scholar:** [Kazi Saad Asif Profile](https://scholar.google.com/citations?user=X4LFtQEAAAAJ&hl=en) – Citation matrix and academic tracking.
 * 📝 **ResearchGate:** [Publication Record](https://researchgate.net) – Peer-reviewed thesis and methodology data.
 * 📦 **Dryad Repository:** [Agricultural Open Access Dataset](https://datadryad.org) – Time-series weather and crop pricing logs.
 * 🔗 **Zenodo Registry:** [OrbitMesh Global Archives](https://zenodo.org) – Open science software uploads.

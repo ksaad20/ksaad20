@@ -147,18 +147,18 @@ To establish cross-platform validation and index consistency, all official profi
 
 #### 🔬 Research & Academic Repositories
 * 🎓 **Google Scholar:** [Kazi Saad Asif Profile](https://scholar.google.com/citations?user=X4LFtQEAAAAJ&hl=en) – Citation matrix and academic tracking.
-* 📝 **ResearchGate:** [Publication Record](https://researchgate.net) – Peer-reviewed thesis and methodology data.
+* 📝 **ResearchGate:** [Publication Record](https://www.researchgate.net/publication/410814437_Comparison_of_Broad_Spectrum_Algorithms_using_the_BEND_Framework_for_Genomic_Sequence_Classification) [Publication Record](https://www.researchgate.net/publication/410815116_MACHINE_LEARNING_BASED_ANALYSIS_AND_PREDICTION_OF_CROP_YIELD_AND_PRICES_OF_AMAN_AUS_AND_BORO_RICE) – Peer-reviewed thesis and methodology data.
 * 📦 **Dryad Repository:** [Agricultural Open Access Dataset](https://datadryad.org) – Time-series weather and crop pricing logs.
 * 🔗 **Zenodo Registry:** [OrbitMesh Global Archives](https://zenodo.org) – Open science software uploads.
-* 🆔 **ORCID Registry:** [Verified ID 0000-0003-0560-9117](https://orcid.org) – Persistent researcher identification anchor.
+* 🆔 **ORCID Registry:** [Verified ID 0000-0003-0560-9117](https://orcid.org/my-orcid?orcid=0000-0003-0560-9117) – Persistent researcher identification anchor.
 
 #### ⚙️ Software & Ecosystem Deployments
-* 🐍 **PyPI (Python Package Index):** [circuitbench Packaging Engine](https://pypi.org) – Core software library publishing link.
-* 🛡️ **OpenSSF Best Practices:** [BadgeApp Framework Permissions](https://bestpractices.dev) – Open-source security and governance compliance.
+* 🐍 **PyPI (Python Package Index):** [circuitbench Packaging Engine](https://pypi.org/user/halkacoder/) – Core software library publishing link.
+* 🛡️ **OpenSSF Best Practices:** [BadgeApp Framework Permissions](https://openprofile.dev/) – Open-source security and governance compliance.
 
 #### 📺 Educational & Community Extensions
-* 📹 **YouTube Channel:** [@kazisaadasif Lectures](https://youtube.com) – Open-source video tutorials covering circuit mechanics, Python architectures, and Arduino Uno programming.
-* 🏛️ **IEEE BRAC University:** [Executive Committee Roster (2019)](https://ieeebracu.com) – Historical record serving as the Student Branch Publications Editor.
+* 📹 **YouTube Channel:** [@kazisaadasif Lectures](https://youtube.com/@kazisaadasif?si=8Uh6lf9rLDb784YI) – Open-source video tutorials covering circuit mechanics, Python architectures, and Arduino Uno programming.
+* 🏛️ **IEEE BRAC University:** [Executive Committee Roster (2019)](https://ieeebracu.com/ieee-bracu-executive-body-members-2019/) – Historical record serving as the Student Branch Publications Editor.
 
 ---
 

@@ -146,6 +146,7 @@ I'm interested in collaborating on research involving:
 To establish cross-platform validation and index consistency, all official profiles, codebases, and peer-reviewed outputs are cataloged below:
 
 #### 🔬 Research & Academic Repositories
+* 📚 **Wikipedia:** [https://en.wikipedia.org/wiki/User:Kazi_Saad_Asif#Open-Source_Projects_&_Research]
 * 🎓 **Google Scholar:** [Kazi Saad Asif Profile](https://scholar.google.com/citations?user=X4LFtQEAAAAJ&hl=en) – Citation matrix and academic tracking.
 * 📝 **ResearchGate:** [Publication Record](https://www.researchgate.net/publication/410814437_Comparison_of_Broad_Spectrum_Algorithms_using_the_BEND_Framework_for_Genomic_Sequence_Classification) [Publication Record](https://www.researchgate.net/publication/410815116_MACHINE_LEARNING_BASED_ANALYSIS_AND_PREDICTION_OF_CROP_YIELD_AND_PRICES_OF_AMAN_AUS_AND_BORO_RICE) – Peer-reviewed thesis and methodology data.
 * 📦 **Dryad Repository:** [Agricultural Open Access Dataset](https://datadryad.org) – Time-series weather and crop pricing logs.
